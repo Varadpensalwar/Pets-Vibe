@@ -1,0 +1,26 @@
+.section{
+    width: 100%;
+    &_header{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5rem;
+        &_p{
+            color:$text;
+        }
+        &_h2{
+            color: $Secondary_color_2;
+        }
+        &_h3{
+            color: $primary_color_1;
+            font-weight: 700;
+            font-size: 30px;
+        }
+        &_h4{
+            color: $primary_color_1;
+            font-weight: 700;
+            font-size: 20px;
+        }
+    }
+}
