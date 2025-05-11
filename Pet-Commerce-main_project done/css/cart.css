@@ -1,0 +1,226 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and overall layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+
+
+header .logo-container h1 {
+    font-size: 2.2em;
+    color: #333;
+    font-weight: bold;
+}
+
+header .logo-container img {
+    height: auto;
+    /* Ensure the height adjusts proportionally */
+    width: 120px;
+    /* Control the width explicitly */
+    max-height: 120px;
+    /* Set a maximum height for consistent sizing */
+    object-fit: contain;
+    /* Ensures the image scales without distortion */
+}
+
+header a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Cart container styles */
+.cart-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th,
+table td {
+    text-align: left;
+    padding: 15px;
+    font-size: 1.1em;
+}
+
+table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+    color: #333;
+}
+
+table td {
+    background-color: #fff;
+    color: #333;
+}
+
+table img {
+    border-radius: 8px;
+}
+
+/* Remove button styling */
+button[type="submit"] {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #c0392b;
+}
+
+/* Total price section */
+.total-price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.checkout-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Empty cart message */
+.cart-container p {
+    font-size: 1.2em;
+    text-align: center;
+    color: #333;
+}
+
+
+.cart-container .checkout-btn a {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.cart-container a:hover {
+    text-decoration: underline;
+}
+
+/* Empty cart button */
+.empty-cart-btn {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.empty-cart-btn:hover {
+    background-color: #e68900;
+}
+
+/* Responsive styling */
+@media (max-width: 480px) {
+    body {
+
+        padding: 2px;
+    }
+
+    .cart-container {
+        background-color: white;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    table th,
+
+    table td {
+        font-size: 1em;
+        padding: 3px;
+    }
+
+    .checkout-btn {
+        font-size: 1em;
+        padding: 10px 20px;
+        margin: 10px 20px;
+        background-color: green;
+    }
+
+    header .logo-container {
+        flex-direction: column;
+    }
+
+    header .logo-container img {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    th:nth-child(4),
+    /* Hide "Quantity" column header */
+    th:nth-child(5),
+    /* Hide "Total" column header */
+    td:nth-child(4),
+    /* Hide "Quantity" column values */
+    td:nth-child(5)
+
+    /* Hide "Total" column values */
+        {
+        display: none;
+    }
+}

@@ -1,0 +1,35 @@
+/* .row Layout */
+.row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    grid-gap: 2rem;
+
+    /* Responsive adjustments for larger screens */
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        /* Resize columns for tablets */
+        grid-gap: 1.5rem;
+        /* Slightly reduce gap on medium screens */
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+        /* Resize columns for smaller screens */
+        grid-gap: 1rem;
+        /* Further reduce gap on small screens */
+    }
+
+    @media (max-width: 480px) {
+        grid-template-columns: repeat(2, 1fr);
+        /* Display 2 items per row on small screens */
+        grid-gap: 1rem;
+        /* Smaller gap on mobile */
+    }
+
+    @media (max-width: 360px) {
+        grid-template-columns: repeat(2, 1fr);
+        /* Display 2 items per row on small screens */
+        grid-gap: 1rem;
+    }
+}

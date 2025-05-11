@@ -1,0 +1,98 @@
+/* .btn Styles */
+.btn {
+    text-decoration: none;
+    padding: 1.3rem 2.2rem;
+    font-size: 16px;
+
+    &_outlined {
+        border: 2px solid $primary_color_1;
+        border-radius: 10rem;
+        color: $primary_color_1;
+        font-weight: 600;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+        &:hover {
+            background-color: #000;
+            color: $white;
+        }
+    }
+
+    &_bg {
+        background-color: $primary_color_1;
+        color: $white;
+        border-radius: 10rem;
+        border: 2px solid $primary_color_1;
+        margin-left: 1rem;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        font-size: 15px;
+
+        &:hover {
+            background-color: lighten($primary_color_1, 10%);
+            border-color: lighten($primary_color_1, 10%);
+        }
+    }
+}
+
+/* Default Button Styling */
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+        background-color: #45a049;
+        transform: scale(1.05);
+    }
+}
+
+/* Responsive Button Adjustments */
+@media (max-width: 1024px) {
+
+    .btn,
+    .button {
+        font-size: 15px;
+        padding: 1.2rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .btn,
+    .button {
+        font-size: 14px;
+        padding: 1.1rem 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .btn,
+    .button {
+        display: none;
+    }
+
+    .btn_outlined {
+        display: none; // Hide outlined button on small screens (max-width: 480px)
+    }
+}
+
+@media (max-width: 360px) {
+
+    .btn,
+    .button {
+        display: none;
+    }
+
+    .btn_outlined {
+        display: none; // Ensure outlined button is hidden on very small screens
+    }
+}

@@ -1,0 +1,140 @@
+.booking-page {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 7px rgb(14, 14, 14);
+  background-image: url("../css/images/appointmentmodel.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.form-label {
+  color: #e2e8f0;
+}
+
+.form-input,
+select {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.booking-header {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: "Helvetica", sans-serif;
+}
+
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #46546b;
+  margin-bottom: 0.5rem;
+}
+
+.form-input,
+select {
+  font-size: 1.5rem;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.3s ease;
+  background-color: #edf2f7;
+}
+
+.form-input:focus,
+select:focus {
+  border-color: #5a67d8;
+  background-color: #ffffff;
+}
+
+.form-submit {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #5a67d8;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-submit:hover {
+  background-color: #4c51bf;
+  transform: translateY(-2px);
+}
+
+.form-submit:active {
+  transform: translateY(1px);
+}
+
+// ... (your original code remains untouched) ...
+
+@media (max-width: 768px) {
+  .booking-page {
+    margin: 10px;
+    max-width: 90%;
+  }
+
+  .booking-header {
+    font-size: 1.75rem;
+  }
+
+  .form-label {
+    font-size: 1.3rem;
+  }
+
+  .appointment-form {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .booking-page {
+    margin: 5px;
+    padding: 0.5rem;
+  }
+
+  .form-label,
+  .form-input,
+  select,
+  .form-submit {
+    font-size: 1.1rem;
+  }
+}
+
+// Your existing 480px media query remains untouched below
+
+
+@media (max-width: 480px) {
+  .booking-page {
+    padding: 1rem;
+  }
+
+  .booking-header {
+    font-size: 1.5rem;
+  }
+
+  .form-input,
+  .form-submit {
+    font-size: 1rem;
+  }
+}

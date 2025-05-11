@@ -1,0 +1,48 @@
+.logos_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+@media (max-width: 768px) {
+    .logos_container {
+        display: flex;
+        flex-wrap: nowrap;
+        /* Prevent wrapping */
+        overflow-x: auto;
+        /* Enable horizontal scrolling */
+        gap: 1rem;
+        padding: 1.5rem;
+        justify-content: flex-start;
+        scrollbar-width: thin;
+        /* Firefox */
+        scrollbar-color: #888 transparent;
+        /* Firefox */
+    }
+
+    .logos_container::-webkit-scrollbar {
+        height: 6px;
+        /* Small horizontal scrollbar */
+    }
+
+    .logos_container::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 3px;
+    }
+
+    .logos_container::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    .logos_container img {
+        max-width: 100px;
+        /* Adjust size for better fit */
+        height: auto;
+        flex-shrink: 0;
+        /* Prevent images from shrinking */
+    }
+}

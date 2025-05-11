@@ -1,0 +1,546 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #ffffff;
+    /* Soft off-white */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+/* Logo Image */
+.logo img {
+    height: 135px;
+    /* Adjust this value as needed */
+    width: auto;
+    /* Keeps the aspect ratio */
+}
+
+header {
+    background: linear-gradient(135deg, rgb(120 176 229 / 71%), rgb(255 255 255 / 71%));
+    padding: 20px 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+header h1 {
+    color: #62b6b6;
+    /* Soft teal */
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+header h4 {
+    font-size: 50px;
+}
+
+
+
+/* Cart Button */
+#cart-btn img {
+    height: 48px;
+    width: 50px;
+    background-color: rgba(255, 255, 255, 0);
+
+}
+
+
+/* Pet Details Section */
+.pet-details {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px auto;
+    width: 85%;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+/* Carousel */
+.carousel {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+}
+
+/* Main Image */
+.main-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Thumbnails */
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, border 0.3s;
+}
+
+.thumbnail.active,
+.thumbnail:hover {
+    border-color: #62b6b6;
+    transform: scale(1.1);
+}
+
+/* Pet Info Section */
+.pet-info {
+    flex: 1.6;
+    padding: 30px 40px;
+}
+
+.pet-info h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: #2980b9;
+    /* Soft green */
+    margin: 16px 0;
+
+}
+
+/* Table */
+.table {
+    margin-top: 20px;
+}
+
+.table td {
+    padding: 8px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.table td:first-child {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+
+    padding: 12px 25px;
+    border-radius: 30px;
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+
+}
+
+#adopt-now a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.btn:hover {
+    background-color: #4a8acb;
+    transform: scale(1.05);
+}
+
+/* Suggested Pets Section */
+.suggested-pets {
+    margin: 50px auto;
+    width: 90%;
+}
+
+.suggested-pets h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.pet-list {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pet-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: calc(33% - 30px);
+    transition: transform 0.3s;
+}
+
+.pet-card:hover {
+    transform: translateY(-5px);
+}
+
+.pet-card img {
+    width: 70%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.pet-card h4 {
+    font-size: 1.3rem;
+    color: #333;
+    padding: 10px 0;
+}
+
+.product-card p {
+    font-size: 15px;
+    color: #777;
+    line-height: 1.5;
+}
+
+
+/* Cart Sidebar (Popup) */
+.cart-sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100%;
+    background: #ffffffe5;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-y: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.cart-sidebar .cart-sidebar-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-sidebar .close-cart-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    margin-left: 275px;
+    color: #333;
+    cursor: pointer;
+}
+
+.cart-items {
+    margin-top: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.cart-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item span {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.remove-btn {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.remove-btn:hover {
+    color: #c0392b;
+}
+
+.cart-total {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.checkout-btn {
+    display: inline-block;
+    background-color: #29a325;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+.checkout-btn:hover {
+    background-color: #4b9e4e;
+    transform: scale(1.05);
+}
+
+/* Filters Sidebar */
+.sidebar {
+    width: 250px;
+    background: #fff;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+}
+
+.sidebar h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+}
+
+.filter-section label {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.filter-section input,
+.filter-section select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.filter-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #62b6b6;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: #4b9e9e;
+}
+
+.add-to-cart-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    margin-top: 15px;
+    font-size: 15px;
+    background-color: #3498db;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #2980b9;
+    color: #ffffff;
+}
+
+.add-to-cart-btn a {
+    text-decoration: none;
+    /* Removes underline */
+    color: white;
+}
+
+.view-details-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    margin-top: 15px;
+    font-size: 15px;
+    text-decoration: none;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.view-details-btn:hover {
+    background-color: #2980b9;
+}
+
+.view-details-btn {
+    background-color: #8d9891;
+}
+
+.view-details-btn:hover {
+    background-color: #131c17;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+
+    /* Adjust header */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .logo-container img {
+        height: 40px;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+
+
+    /* Make the cart table scrollable */
+    .cart-container table {
+        display: none;
+
+    }
+
+
+
+
+
+    /* Adjust pet details layout */
+    .pet-details {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .carousel {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-image {
+        height: 300px;
+    }
+
+    .thumbnails {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .thumbnail {
+        width: 70px;
+        height: 60px;
+    }
+
+    .pet-info {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .btn {
+        width: 100%;
+        display: block;
+    }
+
+    /* Adjust product listing */
+    .pet-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 2fr));
+        gap: 20px;
+    }
+
+    .pet-card {
+        width: 100%;
+        height: auto;
+
+        border-radius: 8px;
+    }
+
+    .pet-card img {
+        width: 100%;
+        height: 180px;
+        /* Fixed height for uniformity */
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .pet-card p {
+        display: none;
+    }
+
+    /* Adjust sidebar (cart) */
+    .cart-sidebar {
+        display: none;
+    }
+
+    /* Filters Sidebar */
+    .sidebar {
+        display: none;
+    }
+
+    #cart-btn img {
+        display: none;
+    }
+
+    .filter-btn {
+        display: none;
+    }
+
+    td {
+        display: flex;
+    }
+
+    td:first-child {
+        font-weight: bold;
+    }
+
+    .logo img {
+        height: 80px;
+        width: auto;
+    }
+
+    header h4 {
+        font-size: 30px;
+        font-weight: bold;
+        color: black;
+
+    }
+
+    header {
+        flex-direction: unset;
+        text-align: right;
+        padding: 5px;
+    }
+
+}

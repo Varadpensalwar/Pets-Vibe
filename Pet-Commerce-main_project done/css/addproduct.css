@@ -1,0 +1,149 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Container for Form */
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+/* Header Section with Logo */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Input Fields and Textarea */
+input[type="text"],
+input[type="number"],
+textarea,
+input[type="file"],
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Focused Input Fields */
+input:focus,
+textarea:focus {
+    border-color: #d37d1f;
+}
+
+/* Dimension Group */
+.dimension-group {
+    display: flex;
+    gap: 10px;
+}
+
+.dimension-group input {
+    width: calc(33.33% - 7px);
+}
+
+/* Price Input */
+input[type="number"] {
+    width: 100%;
+}
+
+/* Color Picker */
+.color-picker {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.color-option {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.color-option:hover,
+.color-option.selected {
+    border-color: #007bff;
+}
+
+/* Button Styling */
+button {
+    background-color: #107fef;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    input,
+    textarea,
+    button {
+        font-size: 14px;
+    }
+}

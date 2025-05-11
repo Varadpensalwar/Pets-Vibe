@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "197591384837",
+    "project_id": "pets-vibe-48eb9",
+    "storage_bucket": "pets-vibe-48eb9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:197591384837:android:4463e8153f5ba5a9fdad6c",
+        "android_client_info": {
+          "package_name": "com.example.pets_vibe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "197591384837-5kcge5aue3hu0949vvfs1ps4afut0373.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pets_vibe",
+            "certificate_hash": "d2c6f4e2274a1eb3638cd300afa3810f2d63ee63"
+          }
+        },
+        {
+          "client_id": "197591384837-7jg7ftrt464r60rfv92a351pnd1tn35p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYAZWnAOTmezjM6Ry-KgBaNixcBN0fjG4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "197591384837-7jg7ftrt464r60rfv92a351pnd1tn35p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "197591384837-sp913nt2fv5d9dat0qsdc31o8gn0pip9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.petsVibe"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,40 @@
+.banner,
+.banner2 {
+  width: 100%;
+  background-image: url(./images/Banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 40px;
+
+  &_wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  &_main_title {
+    padding: 50px;
+  }
+
+  &_p {
+    padding: 10px;
+    margin-bottom: 1rem;
+  }
+
+  &_content {
+    text-align: center;
+  }
+
+  // Responsive Design
+  @media only screen and (max-width: 1024px) {
+    &_main_title {
+      padding: 40px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    display: none; // 🔥 Hides the banner on small screens
+  }
+}

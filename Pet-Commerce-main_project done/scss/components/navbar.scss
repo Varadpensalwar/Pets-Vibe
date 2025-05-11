@@ -1,0 +1,101 @@
+.nav {
+    width: 100%;
+    height: 12rem;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: center;
+
+    &_container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        position: relative;
+    }
+
+    &_logo {
+        img {
+            max-width: 10rem;
+        }
+    }
+
+    &_list {
+        display: flex;
+        list-style: none;
+        align-items: center;
+    }
+
+    &_item {
+        margin: 0 1rem;
+    }
+
+    &_link {
+        text-decoration: none;
+        color: $primary_color_2;
+        font-weight: 700;
+        font-size: 1.8rem;
+    }
+
+    &_right {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Hide Hamburger Menu on Large Screens */
+    &_hamburger {
+        display: none;
+    }
+
+    /* 🌍 Mobile View - Adjustments */
+    @media (max-width: 768px) {
+        &_container {
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+            padding: 1rem 2rem;
+        }
+
+        /* Logo at the Top */
+        &_logo {
+            display: none;
+        }
+
+        &_logo img {
+            max-width: 8rem;
+        }
+
+        /* Hamburger Menu on Left */
+        &_hamburger {
+            display: none;
+        }
+
+        &_list {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 12rem;
+            left: 0;
+            width: 100%;
+            background-color: #fffefbd6;
+            padding: 2rem;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0px 5px 10px rgb(0, 0, 0);
+        }
+
+        &_item {
+            margin: 1rem 0;
+        }
+
+        /* Show menu when active */
+        &_list.active {
+            display: flex;
+        }
+
+        /* Hide Login/Register Button on Mobile */
+        &_right {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,281 @@
+/* .card Styles */
+.card {
+  padding: 1rem;
+  background-color: $Secondary_color_3;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; // Ensures padding is included in width/height
+
+  /* Prevent card from becoming too wide on smaller screens */
+  max-width: 100%;
+  width: 100%; // Ensure it doesn't exceed container width
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+  }
+
+  &_img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+
+  &_body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &_title {
+      font-size: 1.5rem;
+      margin: 0.6rem 0;
+      color: #333;
+      font-weight: bold;
+    }
+
+    &_details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 0.7rem;
+    }
+
+    &_gender,
+    &_age {
+      font-size: 1.4rem;
+      color: #555;
+    }
+
+    &_price {
+      font-weight: 700;
+      text-decoration: none;
+      color: $text;
+      margin-top: 1rem;
+    }
+
+    &_gift {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background-color: $Secondary_color_1;
+      display: flex;
+      font-size: 1.4rem;
+      align-items: center;
+      border-radius: 8px;
+
+      &_icon {
+        margin-right: 1rem;
+      }
+
+      &_p {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+/* Responsive Design for .card */
+@media (max-width: 1024px) {
+  .card {
+    padding: 0.8rem;
+    max-width: 95%; // Prevent card from stretching too much on medium screens
+  }
+
+  .card_body_title {
+    font-size: 1.4rem;
+  }
+
+  .card_body_gender,
+  .card_body_age {
+    font-size: 1.3rem;
+  }
+
+  .card_body_gift {
+    font-size: 1.3rem;
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 0.7rem;
+    max-width: 90%; // Ensure cards are smaller on smaller screens
+  }
+
+  .card_body_title {
+    font-size: 1.3rem;
+  }
+
+  .card_body_gender,
+  .card_body_age {
+    font-size: 1.2rem;
+  }
+
+  .card_body_gift {
+    font-size: 1.2rem;
+    padding: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 0.6rem;
+    border-radius: 8px;
+    max-width: 95%; // Prevent overflow, cards should not stretch too much
+  }
+
+  .card_img {
+    border-radius: 8px;
+  }
+
+  .card_body_title {
+    font-size: 1.2rem;
+  }
+
+  .card_body_gender,
+  .card_body_age {
+    font-size: 1.1rem;
+  }
+
+  .card_body_gift {
+    font-size: 1.1rem;
+    padding: 0.6rem;
+  }
+}
+
+.card {
+  padding: 1rem;
+  background-color: $Secondary_color_3;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  max-width: 400px;
+  width: 100%;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+  }
+
+  &_img {
+    width: 100%; // Ensures image fits inside the card
+    max-width: 100%; // Prevents images from being larger than the card
+    height: 200px; // Adjust this to control height
+    max-height: 200px; // Ensures large images do not overflow
+    object-fit: cover; // Crops images to fit without distortion
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+
+  &_body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &_title {
+      font-size: 1.5rem;
+      margin: 0.6rem 0;
+      color: #333;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    &_price {
+      font-weight: 700;
+      color: $text;
+      margin-top: 1rem;
+      text-align: left;
+    }
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card_img {
+    height: 180px; // Slightly smaller images on tablets
+    max-height: 180px;
+  }
+
+  .card_body_price {
+    text-align: left; // Align price to the right on smaller screens
+  }
+}
+
+@media (max-width: 480px) {
+  .card_img {
+    height: 150px; // Smaller images for mobile
+    max-height: 150px;
+  }
+
+  .card {
+    max-width: 190px;
+    background-color: #edf3f5;
+  }
+
+  .card_body_gift {
+    background: coral;
+    font-size: 1.1rem;
+    color: white;
+    padding: 0.6rem;
+  }
+
+  .card_body_price {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #007bff; // Button color
+    color: #ffffff; // Text color
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #0056b3; // Darker shade on hover
+    }
+  }
+
+
+}
+
+@media (max-width: 360px) {
+  .card_img {
+    height: 120px; // Smaller images for mobile
+    max-height: 120px;
+  }
+
+  .card {
+    max-width: 175px;
+
+  }
+
+  .card_body_price {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #007bff; // Button color
+    color: #ffffff; // Text color
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #0056b3; // Darker shade on hover
+    }
+  }
+
+}
