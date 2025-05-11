@@ -1,215 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services | PetCare</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./css/images/favicon.ico" type="image/x-icon" />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        background-color: #fffaf4;
+        color: #333;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Services | PetCare</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="icon" href="./css/images/favicon.ico" type="image/x-icon">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background-color: #fffaf4;
-      color: #333;
-    }
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 50px 20px;
+      }
 
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 50px 20px;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 2.8rem;
-      color: #e67e22;
-      margin-bottom: 15px;
-    }
-
-    p.subtext {
-      text-align: center;
-      font-size: 1.1rem;
-      color: #555;
-      margin-bottom: 40px;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-
-    .service-card {
-      background: white;
-      border-radius: 16px;
-      padding: 30px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-align: center;
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-    }
-
-    .service-icon {
-      width: 80px;
-      height: 80px;
-      margin-bottom: 20px;
-      object-fit: contain;
-    }
-
-    .service-title {
-      font-size: 1.4rem;
-      color: #e67e22;
-      margin-bottom: 10px;
-    }
-
-    .service-description {
-      font-size: 1rem;
-      color: #555;
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-
-    .learn-btn {
-      background-color: #e67e22;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 10px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      text-decoration: none;
-    }
-
-    .learn-btn:hover {
-      background-color: #cf6e17;
-    }
-
-    /* Modal Styles */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      align-items: center;
-      justify-content: center;
-    }
-
-    .modal-content {
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
-      max-width: 600px;
-      width: 90%;
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
-      text-align: left;
-      position: relative;
-    }
-
-    .modal-content h2 {
-      margin-top: 0;
-      color: #e67e22;
-    }
-
-    .close-modal {
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: #999;
-    }
-
-    @media (max-width: 768px) {
       h1 {
-        font-size: 2rem;
+        text-align: center;
+        font-size: 2.8rem;
+        color: #e67e22;
+        margin-bottom: 15px;
       }
-    }
-  </style>
-</head>
 
-<body>
-
-  <div class="container">
-    <h1>Our Services</h1>
-    <p class="subtext">Everything your pet needs, all in one place. 🐾</p>
-
-    <div class="services-grid">
-      <!-- Service 1 -->
-      <div class="service-card">
-        <img src="./css/images/pet.png" class="service-icon" />
-        <div class="service-title">Pet Grooming</div>
-        <div class="service-description">Keep your furry friend fresh and clean with our full-service grooming.</div>
-        <button class="learn-btn"
-          onclick="openModal('Grooming', 'Our pet grooming services include bath, haircuts, nail trims, and ear cleaning. We use pet-safe products and ensure a stress-free experience.')">Learn
-          More</button>
-      </div>
-
-      <!-- Service 2 -->
-      <div class="service-card">
-        <img src="./css/images/pet-shop.png" class="service-icon" />
-        <div class="service-title">PET-Adoption</div>
-        <div class="service-description">Find your perfect furry companion and give them the loving home they deserve.
-        </div>
-        <button class="learn-btn"
-          onclick="openModal('Pet Adoption', 'At Pets-Vibe, we offer a curated selection of pets raised with the utmost care, love, and attention. Whether youre looking for a playful puppy, a cuddly kitten, or an exotic companion, our pets come from trusted breeders and are health-checked to ensure a happy start in their new homes. Let us help you find the perfect pet to bring joy and companionship into your life')">Learn
-          More</button>
-      </div>
-
-      <!-- Service 3 -->
-      <div class="service-card">
-        <img src="./css/images/pet-food.png" class="service-icon" />
-        <div class="service-title">Pets-Products</div>
-        <div class="service-description">Discover top-quality pet essentials and trendy accessories — only at Pets Vibe.
-        </div>
-        <button class="learn-btn"
-          onclick="openModal('Pets-Products','At Pets Vibe, we bring you a handpicked range of premium pet products designed to keep tails wagging and whiskers twitching. From nutritious food and comfy bedding to playful toys and stylish accessories, every product is chosen with your pets happiness and well-being in mind. Trust Pets Vibe to make pet parenting easier, more joyful, and totally hassle-free.')">Learn
-          More</button>
-      </div>
-
-      <!-- Add more service cards as needed -->
-    </div>
-  </div>
-
-  <!-- Modal -->
-  <div class="modal" id="serviceModal">
-    <div class="modal-content">
-      <span class="close-modal" onclick="closeModal()">×</span>
-      <h2 id="modalTitle">Service Title</h2>
-      <p id="modalDesc">Service details will appear here...</p>
-    </div>
-  </div>
-
-  <script>
-    function openModal(title, desc) {
-      document.getElementById('modalTitle').innerText = title;
-      document.getElementById('modalDesc').innerText = desc;
-      document.getElementById('serviceModal').style.display = 'flex';
-    }
-
-    function closeModal() {
-      document.getElementById('serviceModal').style.display = 'none';
-    }
-
-    // Close modal if clicked outside
-    window.onclick = function (event) {
-      const modal = document.getElementById('serviceModal');
-      if (event.target === modal) {
-        closeModal();
+      p.subtext {
+        text-align: center;
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 40px;
       }
-    }
-  </script>
 
-</body>
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+      }
 
+      .service-card {
+        background: white;
+        border-radius: 16px;
+        padding: 30px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+      }
+
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      .service-icon {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+        object-fit: contain;
+      }
+
+      .service-title {
+        font-size: 1.4rem;
+        color: #e67e22;
+        margin-bottom: 10px;
+      }
+
+      .service-description {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .learn-btn {
+        background-color: #e67e22;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+      }
+
+      .learn-btn:hover {
+        background-color: #cf6e17;
+      }
+
+      /* Modal Styles */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal-content {
+        background: white;
+        padding: 30px;
+        border-radius: 16px;
+        max-width: 600px;
+        width: 90%;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+        text-align: left;
+        position: relative;
+      }
+
+      .modal-content h2 {
+        margin-top: 0;
+        color: #e67e22;
+      }
+
+      .close-modal {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #999;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Our Services</h1>
+      <p class="subtext">Everything your pet needs, all in one place. 🐾</p>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <img src="./css/images/pet.png" class="service-icon" />
+          <div class="service-title">Pet Grooming</div>
+          <div class="service-description">
+            Keep your furry friend fresh and clean with our full-service
+            grooming.
+          </div>
+          <button
+            class="learn-btn"
+            onclick="openModal('Grooming', 'Our pet grooming services include bath, haircuts, nail trims, and ear cleaning. We use pet-safe products and ensure a stress-free experience.')"
+          >
+            Learn More
+          </button>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <img src="./css/images/pet-shop.png" class="service-icon" />
+          <div class="service-title">PET-Adoption</div>
+          <div class="service-description">
+            Find your perfect furry companion and give them the loving home they
+            deserve.
+          </div>
+          <button
+            class="learn-btn"
+            onclick="openModal('Pet Adoption', 'At Pets-Vibe, we offer a curated selection of pets raised with the utmost care, love, and attention. Whether youre looking for a playful puppy, a cuddly kitten, or an exotic companion, our pets come from trusted breeders and are health-checked to ensure a happy start in their new homes. Let us help you find the perfect pet to bring joy and companionship into your life')"
+          >
+            Learn More
+          </button>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <img src="./css/images/pet-food.png" class="service-icon" />
+          <div class="service-title">Pets-Products</div>
+          <div class="service-description">
+            Discover top-quality pet essentials and trendy accessories — only at
+            Pets Vibe.
+          </div>
+          <button
+            class="learn-btn"
+            onclick="openModal('Pets-Products','At Pets Vibe, we bring you a handpicked range of premium pet products designed to keep tails wagging and whiskers twitching. From nutritious food and comfy bedding to playful toys and stylish accessories, every product is chosen with your pets happiness and well-being in mind. Trust Pets Vibe to make pet parenting easier, more joyful, and totally hassle-free.')"
+          >
+            Learn More
+          </button>
+        </div>
+
+        <!-- Add more service cards as needed -->
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="serviceModal">
+      <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">×</span>
+        <h2 id="modalTitle">Service Title</h2>
+        <p id="modalDesc">Service details will appear here...</p>
+      </div>
+    </div>
+
+    <script>
+      function openModal(title, desc) {
+        document.getElementById("modalTitle").innerText = title;
+        document.getElementById("modalDesc").innerText = desc;
+        document.getElementById("serviceModal").style.display = "flex";
+      }
+
+      function closeModal() {
+        document.getElementById("serviceModal").style.display = "none";
+      }
+
+      // Close modal if clicked outside
+      window.onclick = function (event) {
+        const modal = document.getElementById("serviceModal");
+        if (event.target === modal) {
+          closeModal();
+        }
+      };
+    </script>
+  </body>
 </html>
