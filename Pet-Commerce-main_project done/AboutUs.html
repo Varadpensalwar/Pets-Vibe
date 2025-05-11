@@ -1,277 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | PetCare</title>
+    <link rel="icon" href="./css/images/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background-color: #fffaf4;
+        color: #333;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | PetCare</title>
-  <link rel="icon" href="./css/images/favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #fffaf4;
-      color: #333;
-    }
+      .hero {
+        background: url("https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=1500&q=80")
+          center/cover no-repeat;
+        height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        color: white;
+        position: relative;
+      }
 
-    .hero {
-      background: url('https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
-      height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-      color: white;
-      position: relative;
-    }
+      .hero::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
 
-    .hero::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 1;
-    }
-
-    .hero h1,
-    .hero p {
-      z-index: 2;
-      position: relative;
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 600px;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 60px 20px;
-    }
-
-    .section-title {
-      text-align: center;
-      color: #e67e22;
-      font-size: 2.2rem;
-      margin-bottom: 40px;
-    }
-
-    .our-story {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 60px;
-      align-items: center;
-    }
-
-    .story-image {
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
-
-    .story-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .story-content p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
-
-    .values-section {
-      background-color: white;
-      padding: 60px 0;
-      margin: 60px 0;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-    }
-
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      padding: 0 20px;
-    }
-
-    .value-card {
-      text-align: center;
-      padding: 30px 20px;
-      border-radius: 12px;
-      transition: transform 0.3s ease;
-    }
-
-    .value-card:hover {
-      transform: translateY(-5px);
-      background-color: #fef5e7;
-    }
-
-    .value-icon {
-      font-size: 2rem;
-      color: #e67e22;
-      margin-bottom: 20px;
-    }
-
-    .value-title {
-      font-size: 1.4rem;
-      color: #e67e22;
-      margin-bottom: 15px;
-    }
-
-    .value-description {
-      color: #555;
-      line-height: 1.6;
-    }
-
-    .team-section {
-      margin-bottom: 60px;
-    }
-
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-
-    .team-member {
-      background-color: white;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease;
-    }
-
-    .team-member:hover {
-      transform: translateY(-5px);
-    }
-
-    .member-image {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-    }
-
-    .member-info {
-      padding: 20px;
-      text-align: center;
-    }
-
-    .member-name {
-      font-size: 1.3rem;
-      color: #e67e22;
-      margin-bottom: 5px;
-    }
-
-    .member-role {
-      color: #666;
-      font-size: 0.9rem;
-      margin-bottom: 12px;
-    }
-
-    .member-bio {
-      color: #555;
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    @media (max-width: 900px) {
-      .our-story {
-        grid-template-columns: 1fr;
+      .hero h1,
+      .hero p {
+        z-index: 2;
+        position: relative;
       }
 
       .hero h1 {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
+        margin-bottom: 15px;
       }
-    }
-  </style>
-</head>
 
-<body>
+      .hero p {
+        font-size: 1.2rem;
+        max-width: 600px;
+      }
 
-  <section class="hero">
-    <h1>About Pets-Vibe</h1>
-    <p>We're on a mission to make pet care simple, enjoyable, and accessible for everyone.</p>
-  </section>
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 60px 20px;
+      }
 
-  <div class="container">
-    <div class="our-story">
-      <div class="story-image">
-        <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80"
-          alt="Pet Care Team">
-      </div>
-      <div class="story-content">
-        <h2 class="section-title">Our Story</h2>
-        <p>Welcome to <b>Pets Vibe</b>, your one-stop destination for compassionate and intelligent pet care. Our
-          platform is
-          designed to make pet parenting easier, more informed, and more connected. Whether you're looking to book vet
-          appointments, shop for quality pet products, detect early signs of illness, or simply understand your pet
-          better, Pets Vibe brings all of it together in one seamless experience. We aim to empower pet owners with
-          smart tools, such as disease detection using AI, mood analysis, and even breed identification — all built with
-          real-world problems in mind.</p>
-        <p>Pets Vibe is not just a platform — it’s the outcome of our Final Year B.Tech project in Artificial
-          Intelligence and Machine Learning. As a group of tech-driven animal lovers, our mission was to create a
-          meaningful solution that combines innovation with social impact.</p>
-        <p>From integrating machine learning APIs to building a mobile-responsive UI, every element of Pets Vibe
-          reflects our dedication to both technical excellence and pet welfare. We hope our work not only helps pet
-          owners but also contributes positively to the lives of stray animals through features like NGO calling and
-          affordable treatment suggestions.
+      .section-title {
+        text-align: center;
+        color: #e67e22;
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+      }
 
-        </p>
-      </div>
-    </div>
-  </div>
+      .our-story {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 60px;
+        align-items: center;
+      }
 
-  <div class="values-section">
+      .story-image {
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .story-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .story-content p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 20px;
+      }
+
+      .values-section {
+        background-color: white;
+        padding: 60px 0;
+        margin: 60px 0;
+        border-radius: 16px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        padding: 0 20px;
+      }
+
+      .value-card {
+        text-align: center;
+        padding: 30px 20px;
+        border-radius: 12px;
+        transition: transform 0.3s ease;
+      }
+
+      .value-card:hover {
+        transform: translateY(-5px);
+        background-color: #fef5e7;
+      }
+
+      .value-icon {
+        font-size: 2rem;
+        color: #e67e22;
+        margin-bottom: 20px;
+      }
+
+      .value-title {
+        font-size: 1.4rem;
+        color: #e67e22;
+        margin-bottom: 15px;
+      }
+
+      .value-description {
+        color: #555;
+        line-height: 1.6;
+      }
+
+      .team-section {
+        margin-bottom: 60px;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+      }
+
+      .team-member {
+        background-color: white;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease;
+      }
+
+      .team-member:hover {
+        transform: translateY(-5px);
+      }
+
+      .member-image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+
+      .member-info {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .member-name {
+        font-size: 1.3rem;
+        color: #e67e22;
+        margin-bottom: 5px;
+      }
+
+      .member-role {
+        color: #666;
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+      }
+
+      .member-bio {
+        color: #555;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 900px) {
+        .our-story {
+          grid-template-columns: 1fr;
+        }
+
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="hero">
+      <h1>About Pets-Vibe</h1>
+      <p>
+        We're on a mission to make pet care simple, enjoyable, and accessible
+        for everyone.
+      </p>
+    </section>
+
     <div class="container">
-      <h2 class="section-title">Our Values</h2>
-      <div class="values-grid">
-        <div class="value-card">
-          <div class="value-icon"><i class="fas fa-heart"></i></div>
-          <div class="value-title">Compassion First</div>
-          <div class="value-description">We believe every animal deserves love, respect, and the highest quality care.
-          </div>
+      <div class="our-story">
+        <div class="story-image">
+          <img
+            src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80"
+            alt="Pet Care Team"
+          />
         </div>
-
-        <div class="value-card">
-          <div class="value-icon"><i class="fas fa-leaf"></i></div>
-          <div class="value-title">Sustainability</div>
-          <div class="value-description">We're committed to eco-friendly products and practices that protect our planet.
-          </div>
-        </div>
-
-        <div class="value-card">
-          <div class="value-icon"><i class="fas fa-handshake"></i></div>
-          <div class="value-title">Community</div>
-          <div class="value-description">We foster connections between pet lovers and support animal welfare
-            initiatives.</div>
-        </div>
-
-        <div class="value-card">
-          <div class="value-icon"><i class="fas fa-medal"></i></div>
-          <div class="value-title">Quality</div>
-          <div class="value-description">We never compromise on the quality of our products or services.</div>
+        <div class="story-content">
+          <h2 class="section-title">Our Story</h2>
+          <p>
+            Welcome to <b>Pets Vibe</b>, your one-stop destination for
+            compassionate and intelligent pet care. Our platform is designed to
+            make pet parenting easier, more informed, and more connected.
+            Whether you're looking to book vet appointments, shop for quality
+            pet products, detect early signs of illness, or simply understand
+            your pet better, Pets Vibe brings all of it together in one seamless
+            experience. We aim to empower pet owners with smart tools, such as
+            disease detection using AI, mood analysis, and even breed
+            identification — all built with real-world problems in mind.
+          </p>
+          <p>
+            Pets Vibe is not just a platform — it’s the outcome of our Final
+            Year B.Tech project in Artificial Intelligence and Machine Learning.
+            As a group of tech-driven animal lovers, our mission was to create a
+            meaningful solution that combines innovation with social impact.
+          </p>
+          <p>
+            From integrating machine learning APIs to building a
+            mobile-responsive UI, every element of Pets Vibe reflects our
+            dedication to both technical excellence and pet welfare. We hope our
+            work not only helps pet owners but also contributes positively to
+            the lives of stray animals through features like NGO calling and
+            affordable treatment suggestions.
+          </p>
         </div>
       </div>
     </div>
-  </div>
 
+    <div class="values-section">
+      <div class="container">
+        <h2 class="section-title">Our Values</h2>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon"><i class="fas fa-heart"></i></div>
+            <div class="value-title">Compassion First</div>
+            <div class="value-description">
+              We believe every animal deserves love, respect, and the highest
+              quality care.
+            </div>
+          </div>
 
+          <div class="value-card">
+            <div class="value-icon"><i class="fas fa-leaf"></i></div>
+            <div class="value-title">Sustainability</div>
+            <div class="value-description">
+              We're committed to eco-friendly products and practices that
+              protect our planet.
+            </div>
+          </div>
 
-</body>
+          <div class="value-card">
+            <div class="value-icon"><i class="fas fa-handshake"></i></div>
+            <div class="value-title">Community</div>
+            <div class="value-description">
+              We foster connections between pet lovers and support animal
+              welfare initiatives.
+            </div>
+          </div>
 
+          <div class="value-card">
+            <div class="value-icon"><i class="fas fa-medal"></i></div>
+            <div class="value-title">Quality</div>
+            <div class="value-description">
+              We never compromise on the quality of our products or services.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
