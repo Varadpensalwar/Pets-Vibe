@@ -207,6 +207,5 @@ if (isset($_GET['remove_from_cart'])) {
       });
     });
   </script>
-
 </body>
 </html>
